@@ -1,0 +1,8 @@
+# Xcode version
+
+pkgutil –pkg-info com.apple.pkg.Xcode | awk ‘/version: / { print $NF }’ | cut -d. -f-2
+
+# CLT version
+
+pkgutil –pkg-info com.apple.pkg.CLTools_Executables | awk ‘/version: / { print $NF }’ | cut -d. -f-2
+

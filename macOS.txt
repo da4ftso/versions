@@ -1,0 +1,7 @@
+macOSversionMAJOR=$(/usr/bin/sw_vers -productVersion | /usr/bin/awk -F. '{ print $1}')
+macOSversionMINOR=$(/usr/bin/sw_vers -productVersion | /usr/bin/awk -F. '{ print $2}')
+macOSversionBUILD=$(/usr/bin/sw_vers -buildVersion | /usr/bin/awk -F. '{ print $1 }')
+
+#     for offline
+# defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
+# defaults read /System/Library/CoreServices/SystemVersion.plist ProductBuildVersion
