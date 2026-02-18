@@ -1,8 +1,8 @@
 macOSversion=$(/usr/bin/sw_vers -productVersion | /usr/bin/awk -F. '{ print $1}')       # 26
-macOSversionMAJOR=$(/usr/bin/sw_vers -productVersion | /usr/bin/awk -F. '{ print $1}')  # 14
-macOSversionMINOR=$(/usr/bin/sw_vers -productVersion | /usr/bin/awk -F. '{ print $2}')  #    0
-macOSversionBUILD=$(/usr/bin/sw_vers -buildVersion | /usr/bin/awk -F. '{ print $1 }')   # 23A344
+macOSversionMAJOR=$(/usr/bin/sw_vers -productVersion | /usr/bin/awk -F. '{ print $1}')  # 26
+macOSversionMINOR=$(/usr/bin/sw_vers -productVersion | /usr/bin/awk -F. '{ print $2}')  #   .4 (as in 26.4)
+macOSversionBUILD=$(/usr/bin/sw_vers -buildVersion | /usr/bin/awk -F. '{ print $1 }')   # 25E5207k
 
 #     for offline
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion           # 26.4
-defaults read /System/Library/CoreServices/SystemVersion.plist ProductBuildVersion      # 23A344
+defaults read /System/Library/CoreServices/SystemVersion.plist ProductBuildVersion      # 25E5207k
