@@ -1,8 +1,10 @@
 # Xcode version
 
-pkgutil –pkg-info com.apple.pkg.Xcode | awk ‘/version: / { print $NF }’ | cut -d. -f-2
+# be careful that your OS/browser etc doesn't munge the dbl-hyphens to single
+
+pkgutil --pkg-info com.apple.pkg.Xcode | awk ‘/version: / { print $NF }’ | cut -d. -f-2
 
 # CLT version
 
-pkgutil –pkg-info com.apple.pkg.CLTools_Executables | awk ‘/version: / { print $NF }’ | cut -d. -f-2
+pkgutil --pkg-info com.apple.pkg.CLTools_Executables | awk ‘/version: / { print $NF }’ | cut -d. -f-2
 
