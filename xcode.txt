@@ -1,10 +1,11 @@
 # Xcode version
 
 # be careful that your OS/browser etc doesn't munge the dbl-hyphens to single
+# or single straight quotes to curly quotes
 
-pkgutil --pkg-info com.apple.pkg.Xcode | awk ‘/version: / { print $NF }’ | cut -d. -f-2
+pkgutil --pkg-info com.apple.pkg.Xcode | awk '/version: / { print $NF }' | cut -d. -f-2
 
 # CLT version
 
-pkgutil --pkg-info com.apple.pkg.CLTools_Executables | awk ‘/version: / { print $NF }’ | cut -d. -f-2
+pkgutil --pkg-info com.apple.pkg.CLTools_Executables | awk '/version: / { print $NF }' | cut -d. -f-3 # 26.4.1
 
